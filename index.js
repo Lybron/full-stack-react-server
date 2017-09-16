@@ -3,8 +3,11 @@ const app = express();
 
 app.get('/', (req, res) => {
 	res.send(
-		{hi:'there'},
-		{ apple: 'Think Different'})
+		{
+			hi:'there',
+			apple:'Think Different'
+		}
+	)
 });
 
 const PORT = process.env.PORT || 5000;
