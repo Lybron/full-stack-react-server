@@ -9,7 +9,7 @@ passport.use(new GoogleStrategy({
 	clientSecret: Keys.DevKeys.GoogleKeys.clientSecret,
 	callbackURL:'/auth/google/callback'
 }, (accessToken, refreshToken, profile, done) => {
-	console.log('accessToken, accessToken', 'refreshToken', refreshToken, 'profile', profile);
+	console.log('accessToken:, accessToken:', 'refreshToken:', refreshToken, 'profile', profile);
 }));
 
 app.get('/auth/google',passport.authenticate('google', { scope: ['profile', 'email'] }));
